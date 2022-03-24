@@ -35,9 +35,9 @@ PlayVideo::PlayVideo(QWidget *parent) :
 
                                 cv::putText(frame,
                                             ui->lineEdit->text().toStdString(),
-                                            cv::Point(10, frame.rows - 10),
+                                            cv::Point(20, frame.rows - 20),
                                             cv::FONT_HERSHEY_SIMPLEX,
-                                            1.0,
+                                            2.0,
                                             CV_RGB(0, 255, 0),
                                             2);
 
