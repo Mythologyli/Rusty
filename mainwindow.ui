@@ -33,18 +33,30 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="aboutMenu">
     <property name="title">
      <string>关于</string>
     </property>
-    <addaction name="actionAbout"/>
+    <addaction name="aboutAction"/>
    </widget>
-   <addaction name="menu"/>
+   <widget class="QMenu" name="hw1Menu">
+    <property name="title">
+     <string>作业一</string>
+    </property>
+    <addaction name="binarizeImageAction"/>
+   </widget>
+   <addaction name="hw1Menu"/>
+   <addaction name="aboutMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionAbout">
+  <action name="aboutAction">
    <property name="text">
     <string>关于</string>
+   </property>
+  </action>
+  <action name="binarizeImageAction">
+   <property name="text">
+    <string>二值化图像</string>
    </property>
   </action>
  </widget>

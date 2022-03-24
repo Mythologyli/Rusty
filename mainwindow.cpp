@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     setWindowIcon(QIcon(":/resource/resource/icon.png"));
 
-    connect(ui->actionAbout, &QAction::triggered,
+    connect(ui->aboutAction, &QAction::triggered,
             [&]()
             {
                 QMessageBox::about(this, "关于", "License:\n\nGNU Lesser General Public License Version 3");
@@ -37,12 +37,23 @@ MainWindow::MainWindow(QWidget *parent) :
                 reply->deleteLater();
             });
 
-    networkAccessManager->get(QNetworkRequest(QUrl("https://rusty.myth.cxccc/")));
+    networkAccessManager->get(QNetworkRequest(QUrl("https://rusty.myth.cx/")));
+
+    connect(ui->binarizeImageAction, &QAction::triggered,
+            [&]()
+            {
+
+                binarizeImage = new BinarizeImage(this);
+                binarizeImage->setWindowFlag(Qt::Window);
+                binarizeImage->show();
+            });
 }
 
 MainWindow::~MainWindow()
 {
     delete networkAccessManager;
+
+    delete binarizeImage;
 
     delete ui;
 }

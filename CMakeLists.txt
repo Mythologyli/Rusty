@@ -14,9 +14,14 @@ find_package(Qt6 COMPONENTS
         REQUIRED
         )
 
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
 add_executable(Rusty WIN32
         main.cpp
         mainwindow.cpp
+        utility/utility.cpp
+        binarizeimage/binarizeimage.cpp
         resource.qrc
         )
 
@@ -26,3 +31,5 @@ target_link_libraries(Rusty
         Qt::Widgets
         Qt::WebEngineWidgets
         )
+
+target_link_libraries(Rusty ${OpenCV_LIBS})
