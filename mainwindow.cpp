@@ -23,12 +23,21 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(networkAccessManager, &QNetworkAccessManager::finished,
             [&](QNetworkReply *reply)
             {
-                auto text = QString(reply->readAll());
-                ui->textBrowser->setText(text);
+                if (reply->error() == QNetworkReply::NoError)
+                {
+                    ui->textBrowser->setText(QString(reply->readAll()));
+                }
+                else
+                {
+                    QString text = "<html><h3>发生错误！无法显示作业详情，请检查网络连接</h3>";
+                    text += "<h3>您也可以直接查看 <a href=\"https://rusty.myth.cx\">https://rusty.myth.cx</a></h3></html>";
+                    ui->textBrowser->setText(text);
+                }
+
                 reply->deleteLater();
             });
 
-    networkAccessManager->get(QNetworkRequest(QUrl("https://rusty.myth.cx/")));
+    networkAccessManager->get(QNetworkRequest(QUrl("https://rusty.myth.cxccc/")));
 }
 
 MainWindow::~MainWindow()
