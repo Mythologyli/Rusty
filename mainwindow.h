@@ -5,6 +5,7 @@
 #include <QNetworkAccessManager>
 
 #include "binarizeimage/binarizeimage.h"
+#include "playvideo/playvideo.h"
 
 namespace Ui
 {
@@ -26,6 +27,7 @@ private:
     QNetworkAccessManager *networkAccessManager;
 
     BinarizeImage *binarizeImage;
+    PlayVideo *playVideo;
 };
 
 #endif // RUSTY_MAINWINDOW_H

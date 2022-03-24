@@ -22,6 +22,7 @@ add_executable(Rusty WIN32
         mainwindow.cpp
         utility/utility.cpp
         binarizeimage/binarizeimage.cpp
+        playvideo/playvideo.cpp
         resource.qrc
         )
 

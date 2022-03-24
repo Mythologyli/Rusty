@@ -9,6 +9,12 @@ cv::Mat utility::openImageFile(QWidget *parent)
                                                     ".",
                                                     "图像 (*.jpg *.png)");
 
+    if (fileName.isEmpty())
+    {
+        cv::Mat emptyImage;
+        return emptyImage;
+    }
+
     return cv::imread(fileName.toLocal8Bit().toStdString());
 }
 
@@ -19,7 +25,27 @@ void utility::saveImageFile(cv::Mat &image, QWidget *parent)
                                                     ".",
                                                     "JPEG 图像 (*.jpg);;PNG 图像 (*.png)");
 
+    if (fileName.isEmpty())
+    {
+        return;
+    }
+
     cv::imwrite(fileName.toLocal8Bit().toStdString(), image);
+}
+
+cv::VideoCapture *utility::openVideoFile(QWidget *parent)
+{
+    QString fileName = QFileDialog::getOpenFileName(parent,
+                                                    "打开视频",
+                                                    ".",
+                                                    "视频 (*.mp4 *.flv *.avi *.mkv)");
+
+    if (fileName.isEmpty())
+    {
+        return new cv::VideoCapture();
+    }
+
+    return new cv::VideoCapture(fileName.toLocal8Bit().toStdString());
 }
 
 void utility::showCvMatInLabel(cv::Mat &image, QLabel *label)

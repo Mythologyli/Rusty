@@ -21,8 +21,11 @@ BinarizeImage::BinarizeImage(QWidget *parent) :
     connect(ui->saveImageButton, &QPushButton::clicked,
             [&]()
             {
-                cv::Mat binaryImage = convertToBinaryImage(originImage, ui->thresholdSpinBox->value());
-                utility::saveImageFile(binaryImage, this);
+                if (!originImage.empty())
+                {
+                    cv::Mat binaryImage = convertToBinaryImage(originImage, ui->thresholdSpinBox->value());
+                    utility::saveImageFile(binaryImage, this);
+                }
             });
 
     connect(ui->thresholdSpinBox, &QSpinBox::valueChanged, this, &BinarizeImage::displayImage);
@@ -35,10 +38,13 @@ BinarizeImage::~BinarizeImage()
 
 void BinarizeImage::displayImage()
 {
-    cv::Mat binaryImage = convertToBinaryImage(originImage, ui->thresholdSpinBox->value());
+    if (!originImage.empty())
+    {
+        cv::Mat binaryImage = convertToBinaryImage(originImage, ui->thresholdSpinBox->value());
 
-    utility::showCvMatInLabel(originImage, ui->originImageLabel);
-    utility::showCvMatInLabel(binaryImage, ui->binaryImageLabel);
+        utility::showCvMatInLabel(originImage, ui->originImageLabel);
+        utility::showCvMatInLabel(binaryImage, ui->binaryImageLabel);
+    }
 }
 
 cv::Mat BinarizeImage::convertToBinaryImage(cv::Mat &image, double thresh)

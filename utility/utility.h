@@ -10,6 +10,8 @@ namespace utility
 
     void saveImageFile(cv::Mat &image, QWidget *parent = nullptr);
 
+    cv::VideoCapture *openVideoFile(QWidget *parent = nullptr);
+
     void showCvMatInLabel(cv::Mat &image, QLabel *label);
 }
 

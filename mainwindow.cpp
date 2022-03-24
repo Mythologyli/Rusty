@@ -42,18 +42,23 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->binarizeImageAction, &QAction::triggered,
             [&]()
             {
-
                 binarizeImage = new BinarizeImage(this);
                 binarizeImage->setWindowFlag(Qt::Window);
+                binarizeImage->setAttribute(Qt::WA_DeleteOnClose);
                 binarizeImage->show();
+            });
+
+    connect(ui->playVideoAction, &QAction::triggered,
+            [&]()
+            {
+                playVideo = new PlayVideo(this);
+                playVideo->setWindowFlag(Qt::Window);
+                playVideo->setAttribute(Qt::WA_DeleteOnClose);
+                playVideo->show();
             });
 }
 
 MainWindow::~MainWindow()
 {
-    delete networkAccessManager;
-
-    delete binarizeImage;
-
     delete ui;
 }
