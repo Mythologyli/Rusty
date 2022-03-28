@@ -46,7 +46,14 @@
     <addaction name="binarizeImageAction"/>
     <addaction name="playVideoAction"/>
    </widget>
+   <widget class="QMenu" name="hw2Menu">
+    <property name="title">
+     <string>作业二</string>
+    </property>
+    <addaction name="histogramEqualizationAction"/>
+   </widget>
    <addaction name="hw1Menu"/>
+   <addaction name="hw2Menu"/>
    <addaction name="aboutMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -63,6 +70,11 @@
   <action name="playVideoAction">
    <property name="text">
     <string>视频播放</string>
+   </property>
+  </action>
+  <action name="histogramEqualizationAction">
+   <property name="text">
+    <string>直方图均衡</string>
    </property>
   </action>
  </widget>

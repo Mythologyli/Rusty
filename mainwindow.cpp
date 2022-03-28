@@ -56,6 +56,15 @@ MainWindow::MainWindow(QWidget *parent) :
                 playVideo->setAttribute(Qt::WA_DeleteOnClose);
                 playVideo->show();
             });
+
+    connect(ui->histogramEqualizationAction, &QAction::triggered,
+            [&]()
+            {
+                histogramEqualization = new HistogramEqualization(this);
+                histogramEqualization->setWindowFlag(Qt::Window);
+                histogramEqualization->setAttribute(Qt::WA_DeleteOnClose);
+                histogramEqualization->show();
+            });
 }
 
 MainWindow::~MainWindow()

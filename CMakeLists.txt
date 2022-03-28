@@ -11,6 +11,7 @@ find_package(Qt6 COMPONENTS
         Gui
         Widgets
         WebEngineWidgets
+        Charts
         REQUIRED
         )
 
@@ -23,6 +24,7 @@ add_executable(Rusty WIN32
         utility/utility.cpp
         binarizeimage/binarizeimage.cpp
         playvideo/playvideo.cpp
+        histogramequalization/histogramequalization.cpp
         resource.qrc
         )
 
@@ -31,6 +33,7 @@ target_link_libraries(Rusty
         Qt::Gui
         Qt::Widgets
         Qt::WebEngineWidgets
+        Qt::Charts
         )
 
 target_link_libraries(Rusty ${OpenCV_LIBS})

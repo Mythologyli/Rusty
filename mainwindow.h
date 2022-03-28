@@ -6,6 +6,7 @@
 
 #include "binarizeimage/binarizeimage.h"
 #include "playvideo/playvideo.h"
+#include "histogramequalization/histogramequalization.h"
 
 namespace Ui
 {
@@ -28,6 +29,7 @@ private:
 
     BinarizeImage *binarizeImage;
     PlayVideo *playVideo;
+    HistogramEqualization *histogramEqualization;
 };
 
 #endif // RUSTY_MAINWINDOW_H

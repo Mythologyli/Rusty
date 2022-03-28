@@ -20,7 +20,7 @@ public:
 
 private slots:
 
-    void displayImage();
+    void showImage();
 
 private:
     static cv::Mat convertToBinaryImage(cv::Mat &image, double threshold);

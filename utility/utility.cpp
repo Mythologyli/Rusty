@@ -53,10 +53,10 @@ void utility::showCvMatInLabel(cv::Mat &image, QLabel *label)
     cv::Mat convertedImage;
     cvtColor(image, convertedImage, cv::COLOR_BGR2RGB);
 
-    QImage qImage((uchar *) convertedImage.data,
+    QImage qImage(static_cast<uchar *>(convertedImage.data),
                   convertedImage.cols,
                   convertedImage.rows,
-                  (int) convertedImage.step,
+                  static_cast<int>(convertedImage.step),
                   QImage::Format_RGB888);
 
     label->setPixmap(QPixmap::fromImage(qImage).scaled(label->size(),
