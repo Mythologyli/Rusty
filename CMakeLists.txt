@@ -10,7 +10,7 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
-        WebEngineWidgets
+        Network
         Charts
         REQUIRED
         )
@@ -32,7 +32,7 @@ target_link_libraries(Rusty
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        Qt::WebEngineWidgets
+        Qt::Network
         Qt::Charts
         )
 
