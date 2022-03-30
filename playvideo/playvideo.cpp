@@ -54,7 +54,7 @@ PlayVideo::PlayVideo(QWidget *parent) :
                 {
                     double fps = videoCapture->get(cv::CAP_PROP_FPS);
                     timer->start(static_cast<int>(1000.0 / fps));
-                    ui->lineEdit->setText("Watermark, ASCII only. FPS: " + QString::number((int) fps));
+                    ui->lineEdit->setText("ASCII only. FPS: " + QString::number((int) fps));
                 }
             });
 }
