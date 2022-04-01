@@ -2,12 +2,12 @@
 #include <QFileDialog>
 
 #include "../utility/utility.h"
-#include "playvideo.h"
-#include "ui_playvideo.h"
+#include "videoplayer.h"
+#include "ui_videoplayer.h"
 
-PlayVideo::PlayVideo(QWidget *parent) :
+VideoPlayer::VideoPlayer(QWidget *parent) :
         QWidget(parent),
-        ui(new Ui::PlayVideo),
+        ui(new Ui::VideoPlayer),
         videoCapture(nullptr),
         timer(nullptr)
 {
@@ -59,7 +59,7 @@ PlayVideo::PlayVideo(QWidget *parent) :
             });
 }
 
-PlayVideo::~PlayVideo()
+VideoPlayer::~VideoPlayer()
 {
     if (videoCapture != nullptr)
     {

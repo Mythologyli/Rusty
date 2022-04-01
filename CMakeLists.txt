@@ -22,8 +22,8 @@ add_executable(Rusty WIN32
         main.cpp
         mainwindow.cpp
         utility/utility.cpp
-        binarizeimage/binarizeimage.cpp
-        playvideo/playvideo.cpp
+        imagebinarization/imagebinarization.cpp
+        videoplayer/videoplayer.cpp
         histogramequalization/histogramequalization.cpp
         resource.qrc
         )

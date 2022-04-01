@@ -53,8 +53,8 @@
     <property name="title">
      <string>作业一</string>
     </property>
-    <addaction name="binarizeImageAction"/>
-    <addaction name="playVideoAction"/>
+    <addaction name="imageBinarizationAction"/>
+    <addaction name="videoPlayerAction"/>
    </widget>
    <widget class="QMenu" name="hw2Menu">
     <property name="title">
@@ -72,12 +72,12 @@
     <string>关于</string>
    </property>
   </action>
-  <action name="binarizeImageAction">
+  <action name="imageBinarizationAction">
    <property name="text">
     <string>二值化图像</string>
    </property>
   </action>
-  <action name="playVideoAction">
+  <action name="videoPlayerAction">
    <property name="text">
     <string>视频播放</string>
    </property>

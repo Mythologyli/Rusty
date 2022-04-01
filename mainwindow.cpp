@@ -39,22 +39,22 @@ MainWindow::MainWindow(QWidget *parent) :
 
     networkAccessManager->get(QNetworkRequest(QUrl("https://rusty.myth.cx/")));
 
-    connect(ui->binarizeImageAction, &QAction::triggered,
+    connect(ui->imageBinarizationAction, &QAction::triggered,
             [&]()
             {
-                binarizeImage = new BinarizeImage(this);
-                binarizeImage->setWindowFlag(Qt::Window);
-                binarizeImage->setAttribute(Qt::WA_DeleteOnClose);
-                binarizeImage->show();
+                imageBinarization = new ImageBinarization(this);
+                imageBinarization->setWindowFlag(Qt::Window);
+                imageBinarization->setAttribute(Qt::WA_DeleteOnClose);
+                imageBinarization->show();
             });
 
-    connect(ui->playVideoAction, &QAction::triggered,
+    connect(ui->videoPlayerAction, &QAction::triggered,
             [&]()
             {
-                playVideo = new PlayVideo(this);
-                playVideo->setWindowFlag(Qt::Window);
-                playVideo->setAttribute(Qt::WA_DeleteOnClose);
-                playVideo->show();
+                videoPlayer = new VideoPlayer(this);
+                videoPlayer->setWindowFlag(Qt::Window);
+                videoPlayer->setAttribute(Qt::WA_DeleteOnClose);
+                videoPlayer->show();
             });
 
     connect(ui->histogramEqualizationAction, &QAction::triggered,

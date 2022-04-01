@@ -4,8 +4,8 @@
 #include <QMainWindow>
 #include <QNetworkAccessManager>
 
-#include "binarizeimage/binarizeimage.h"
-#include "playvideo/playvideo.h"
+#include "imagebinarization/imagebinarization.h"
+#include "videoplayer/videoplayer.h"
 #include "histogramequalization/histogramequalization.h"
 
 namespace Ui
@@ -27,8 +27,8 @@ private:
 
     QNetworkAccessManager *networkAccessManager;
 
-    BinarizeImage *binarizeImage;
-    PlayVideo *playVideo;
+    ImageBinarization *imageBinarization;
+    VideoPlayer *videoPlayer;
     HistogramEqualization *histogramEqualization;
 };
 

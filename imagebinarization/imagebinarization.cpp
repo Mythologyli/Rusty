@@ -1,12 +1,12 @@
 #include <QFileDialog>
 
 #include "../utility/utility.h"
-#include "binarizeimage.h"
-#include "ui_binarizeimage.h"
+#include "imagebinarization.h"
+#include "ui_imagebinarization.h"
 
-BinarizeImage::BinarizeImage(QWidget *parent) :
+ImageBinarization::ImageBinarization(QWidget *parent) :
         QWidget(parent),
-        ui(new Ui::BinarizeImage)
+        ui(new Ui::ImageBinarization)
 {
     ui->setupUi(this);
 
@@ -21,7 +21,7 @@ BinarizeImage::BinarizeImage(QWidget *parent) :
                 }
 
                 originImage = image;
-                connect(ui->thresholdSpinBox, &QSpinBox::valueChanged, this, &BinarizeImage::showImage);
+                connect(ui->thresholdSpinBox, &QSpinBox::valueChanged, this, &ImageBinarization::showImage);
                 showImage();
             });
 
@@ -36,12 +36,12 @@ BinarizeImage::BinarizeImage(QWidget *parent) :
             });
 }
 
-BinarizeImage::~BinarizeImage()
+ImageBinarization::~ImageBinarization()
 {
     delete ui;
 }
 
-void BinarizeImage::showImage()
+void ImageBinarization::showImage()
 {
     cv::Mat binaryImage = convertToBinaryImage(originImage, ui->thresholdSpinBox->value());
 
@@ -49,7 +49,7 @@ void BinarizeImage::showImage()
     utility::showCvMatInLabel(binaryImage, ui->binaryImageLabel);
 }
 
-cv::Mat BinarizeImage::convertToBinaryImage(cv::Mat &image, double thresh)
+cv::Mat ImageBinarization::convertToBinaryImage(cv::Mat &image, double thresh)
 {
     cv::Mat grayImage;
     cvtColor(image, grayImage, cv::COLOR_BGR2GRAY); // BRG to grayscale.
