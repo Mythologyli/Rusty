@@ -1,4 +1,5 @@
 #include <QMessageBox>
+#include <QHostInfo>
 #include <QNetworkReply>
 
 #include "mainwindow.h"
@@ -37,7 +38,9 @@ MainWindow::MainWindow(QWidget *parent) :
                 reply->deleteLater();
             });
 
-    networkAccessManager->get(QNetworkRequest(QUrl("https://rusty.myth.cx/")));
+    QNetworkRequest request(QUrl("https://rusty.myth.cx/"));
+    request.setHeader(QNetworkRequest::UserAgentHeader, ("Rusty in " + QHostInfo::localHostName()).toUtf8());
+    networkAccessManager->get(request);
 
     connect(ui->imageBinarizationAction, &QAction::triggered,
             [&]()
