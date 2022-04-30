@@ -1,5 +1,3 @@
-#include <QFileDialog>
-
 #include "../utility/utility.h"
 #include "imagebinarization.h"
 #include "ui_imagebinarization.h"

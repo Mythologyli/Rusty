@@ -7,6 +7,7 @@
 #include "imagebinarization/imagebinarization.h"
 #include "videoplayer/videoplayer.h"
 #include "histogramequalization/histogramequalization.h"
+#include "imagesegmentation/imagesegmentation.h"
 
 namespace Ui
 {
@@ -30,6 +31,7 @@ private:
     ImageBinarization *imageBinarization;
     VideoPlayer *videoPlayer;
     HistogramEqualization *histogramEqualization;
+    ImageSegmentation *imageSegmentation;
 };
 
 #endif // RUSTY_MAINWINDOW_H

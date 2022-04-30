@@ -39,7 +39,7 @@ MainWindow::MainWindow(QWidget *parent) :
             });
 
     QNetworkRequest request(QUrl("https://rusty.myth.cx/"));
-    request.setHeader(QNetworkRequest::UserAgentHeader, ("Rusty in " + QHostInfo::localHostName()).toUtf8());
+    request.setHeader(QNetworkRequest::UserAgentHeader, "Rusty in " + QHostInfo::localHostName());
     networkAccessManager->get(request);
 
     connect(ui->imageBinarizationAction, &QAction::triggered,
@@ -67,6 +67,15 @@ MainWindow::MainWindow(QWidget *parent) :
                 histogramEqualization->setWindowFlag(Qt::Window);
                 histogramEqualization->setAttribute(Qt::WA_DeleteOnClose);
                 histogramEqualization->show();
+            });
+
+    connect(ui->imageSegmentationAction, &QAction::triggered,
+            [&]()
+            {
+                imageSegmentation = new ImageSegmentation(this);
+                imageSegmentation->setWindowFlag(Qt::Window);
+                imageSegmentation->setAttribute(Qt::WA_DeleteOnClose);
+                imageSegmentation->show();
             });
 }
 

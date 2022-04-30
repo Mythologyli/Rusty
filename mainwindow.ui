@@ -53,18 +53,25 @@
     <property name="title">
      <string>作业一</string>
     </property>
-    <addaction name="imageBinarizationAction"/>
-    <addaction name="videoPlayerAction"/>
+       <addaction name="imageBinarizationAction"/>
+       <addaction name="videoPlayerAction"/>
    </widget>
-   <widget class="QMenu" name="hw2Menu">
-    <property name="title">
-     <string>作业二</string>
-    </property>
-    <addaction name="histogramEqualizationAction"/>
-   </widget>
-   <addaction name="hw1Menu"/>
-   <addaction name="hw2Menu"/>
-   <addaction name="aboutMenu"/>
+      <widget class="QMenu" name="hw2Menu">
+          <property name="title">
+              <string>作业二</string>
+          </property>
+          <addaction name="histogramEqualizationAction"/>
+      </widget>
+      <widget class="QMenu" name="hw3Menu">
+          <property name="title">
+              <string>作业三</string>
+          </property>
+          <addaction name="imageSegmentationAction"/>
+      </widget>
+      <addaction name="hw1Menu"/>
+      <addaction name="hw2Menu"/>
+      <addaction name="hw3Menu"/>
+      <addaction name="aboutMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="aboutAction">
@@ -77,16 +84,21 @@
     <string>二值化图像</string>
    </property>
   </action>
-  <action name="videoPlayerAction">
-   <property name="text">
-    <string>视频播放</string>
-   </property>
-  </action>
-  <action name="histogramEqualizationAction">
-   <property name="text">
-    <string>直方图均衡</string>
-   </property>
-  </action>
+     <action name="videoPlayerAction">
+         <property name="text">
+             <string>视频播放</string>
+         </property>
+     </action>
+     <action name="histogramEqualizationAction">
+         <property name="text">
+             <string>直方图均衡</string>
+         </property>
+     </action>
+     <action name="imageSegmentationAction">
+         <property name="text">
+             <string>图像分割</string>
+         </property>
+     </action>
  </widget>
  <resources/>
  <connections/>
