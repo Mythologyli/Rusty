@@ -77,6 +77,15 @@ MainWindow::MainWindow(QWidget *parent) :
                 imageSegmentation->setAttribute(Qt::WA_DeleteOnClose);
                 imageSegmentation->show();
             });
+
+    connect(ui->imageMorphologyAction, &QAction::triggered,
+            [&]()
+            {
+                imageMorphology = new ImageMorphology(this);
+                imageMorphology->setWindowFlag(Qt::Window);
+                imageMorphology->setAttribute(Qt::WA_DeleteOnClose);
+                imageMorphology->show();
+            });
 }
 
 MainWindow::~MainWindow()

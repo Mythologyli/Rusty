@@ -8,6 +8,7 @@
 #include "videoplayer/videoplayer.h"
 #include "histogramequalization/histogramequalization.h"
 #include "imagesegmentation/imagesegmentation.h"
+#include "imagemorphology/imagemorphology.h"
 
 namespace Ui
 {
@@ -32,6 +33,7 @@ private:
     VideoPlayer *videoPlayer;
     HistogramEqualization *histogramEqualization;
     ImageSegmentation *imageSegmentation;
+    ImageMorphology *imageMorphology;
 };
 
 #endif // RUSTY_MAINWINDOW_H

@@ -26,6 +26,7 @@ add_executable(Rusty WIN32
         videoplayer/videoplayer.cpp
         histogramequalization/histogramequalization.cpp
         imagesegmentation/imagesegmentation.cpp
+        imagemorphology/imagemorphology.cpp
         resource.qrc
         )
 
