@@ -71,21 +71,21 @@ cv::Mat ImageMorphology::skeletonize(cv::Mat &image)
 {
     cv::Mat clonedImage = image.clone(); // Make a copy of the image.
 
-    cv::Mat skeleton(clonedImage.size(), CV_8UC1, cv::Scalar(0)); // Create a skeleton image.
-    cv::Mat temp; // Create a temporary image.
-    cv::Mat eroded; // Create an eroded image.
+    cv::Mat skeletonImage(clonedImage.size(), CV_8UC1, cv::Scalar(0)); // Create a skeletonImage image.
+    cv::Mat tempImage; // Create a temporary image.
+    cv::Mat erodedImage; // Create an erodedImage image.
 
     // Create a kernel.
     cv::Mat element = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
 
     do
     {
-        cv::morphologyEx(clonedImage, temp, cv::MORPH_OPEN, element); // Do an opening operation.
-        cv::bitwise_not(temp, temp); // Invert the image.
-        cv::bitwise_and(clonedImage, temp, temp);
-        cv::bitwise_or(skeleton, temp, skeleton);
+        cv::morphologyEx(clonedImage, tempImage, cv::MORPH_OPEN, element); // Do an opening operation.
+        cv::bitwise_not(tempImage, tempImage); // Invert the image.
+        cv::bitwise_and(clonedImage, tempImage, tempImage);
+        cv::bitwise_or(skeletonImage, tempImage, skeletonImage);
         cv::erode(clonedImage, clonedImage, element); // Erode the image.
     } while (cv::countNonZero(clonedImage) != 0); // Loop until the image is empty.
 
-    return skeleton;
+    return skeletonImage;
 }
