@@ -1,5 +1,5 @@
-#ifndef RUSTY_ImageMorphology_H
-#define RUSTY_ImageMorphology_H
+#ifndef RUSTY_IMAGEMORPHOLOGY_H
+#define RUSTY_IMAGEMORPHOLOGY_H
 
 #include <QWidget>
 #include <opencv2/opencv.hpp>
@@ -35,4 +35,4 @@ private:
     cv::Mat originImage;
 };
 
-#endif // RUSTY_ImageMorphology_H
+#endif // RUSTY_IMAGEMORPHOLOGY_H
