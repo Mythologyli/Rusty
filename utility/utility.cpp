@@ -7,7 +7,7 @@ cv::Mat utility::openImageFile(QWidget *parent)
     QString fileName = QFileDialog::getOpenFileName(parent,
                                                     "打开图像",
                                                     ".",
-                                                    "图像 (*.jpg *.png)");
+                                                    "图像 (*.jpg *.png *.bmp)");
 
     if (fileName.isEmpty())
     {

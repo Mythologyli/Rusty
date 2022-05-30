@@ -27,6 +27,7 @@ add_executable(Rusty WIN32
         histogramequalization/histogramequalization.cpp
         imagesegmentation/imagesegmentation.cpp
         imagemorphology/imagemorphology.cpp
+        imagerestoration/imagerestoration.cpp
         resource.qrc
         )
 

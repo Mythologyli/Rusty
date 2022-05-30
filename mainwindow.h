@@ -9,6 +9,7 @@
 #include "histogramequalization/histogramequalization.h"
 #include "imagesegmentation/imagesegmentation.h"
 #include "imagemorphology/imagemorphology.h"
+#include "imagerestoration/imagerestoration.h"
 
 namespace Ui
 {
@@ -34,6 +35,7 @@ private:
     HistogramEqualization *histogramEqualization;
     ImageSegmentation *imageSegmentation;
     ImageMorphology *imageMorphology;
+    ImageRestoration *imageRestoration;
 };
 
 #endif // RUSTY_MAINWINDOW_H

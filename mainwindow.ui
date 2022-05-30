@@ -47,70 +47,82 @@
     <property name="title">
      <string>关于</string>
     </property>
-       <addaction name="aboutAction"/>
+    <addaction name="aboutAction"/>
    </widget>
-      <widget class="QMenu" name="hw1Menu">
-          <property name="title">
-              <string>作业一</string>
-          </property>
-          <addaction name="imageBinarizationAction"/>
-          <addaction name="videoPlayerAction"/>
-      </widget>
-      <widget class="QMenu" name="hw2Menu">
-          <property name="title">
-              <string>作业二</string>
-          </property>
-          <addaction name="histogramEqualizationAction"/>
-      </widget>
-      <widget class="QMenu" name="hw3Menu">
-          <property name="title">
-              <string>作业三</string>
-          </property>
-          <addaction name="imageSegmentationAction"/>
-      </widget>
-      <widget class="QMenu" name="hw4Menu">
-          <property name="title">
-              <string>作业四</string>
-          </property>
-          <addaction name="imageMorphologyAction"/>
-      </widget>
-      <addaction name="hw1Menu"/>
-      <addaction name="hw2Menu"/>
-      <addaction name="hw3Menu"/>
-      <addaction name="hw4Menu"/>
-      <addaction name="aboutMenu"/>
+   <widget class="QMenu" name="hw1Menu">
+    <property name="title">
+     <string>作业一</string>
+    </property>
+    <addaction name="imageBinarizationAction"/>
+    <addaction name="videoPlayerAction"/>
+   </widget>
+   <widget class="QMenu" name="hw2Menu">
+    <property name="title">
+     <string>作业二</string>
+    </property>
+    <addaction name="histogramEqualizationAction"/>
+   </widget>
+   <widget class="QMenu" name="hw3Menu">
+    <property name="title">
+     <string>作业三</string>
+    </property>
+    <addaction name="imageSegmentationAction"/>
+   </widget>
+   <widget class="QMenu" name="hw4Menu">
+    <property name="title">
+     <string>作业四</string>
+    </property>
+    <addaction name="imageMorphologyAction"/>
+   </widget>
+   <widget class="QMenu" name="hw5Menu">
+    <property name="title">
+     <string>作业五</string>
+    </property>
+    <addaction name="imageRestorationAction"/>
+   </widget>
+   <addaction name="hw1Menu"/>
+   <addaction name="hw2Menu"/>
+   <addaction name="hw3Menu"/>
+   <addaction name="hw4Menu"/>
+   <addaction name="hw5Menu"/>
+   <addaction name="aboutMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-     <action name="aboutAction">
-         <property name="text">
-             <string>关于</string>
-         </property>
-     </action>
-     <action name="imageBinarizationAction">
-         <property name="text">
-             <string>二值化图像</string>
-         </property>
-     </action>
-     <action name="videoPlayerAction">
-         <property name="text">
-             <string>视频播放</string>
-         </property>
-     </action>
-     <action name="histogramEqualizationAction">
-         <property name="text">
-             <string>直方图均衡</string>
-         </property>
-     </action>
-     <action name="imageSegmentationAction">
-         <property name="text">
-             <string>图像分割</string>
-         </property>
-     </action>
-     <action name="imageMorphologyAction">
-         <property name="text">
-             <string>图像形态学</string>
-         </property>
-     </action>
+  <action name="aboutAction">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="imageBinarizationAction">
+   <property name="text">
+    <string>二值化图像</string>
+   </property>
+  </action>
+  <action name="videoPlayerAction">
+   <property name="text">
+    <string>视频播放</string>
+   </property>
+  </action>
+  <action name="histogramEqualizationAction">
+   <property name="text">
+    <string>直方图均衡</string>
+   </property>
+  </action>
+  <action name="imageSegmentationAction">
+   <property name="text">
+    <string>图像分割</string>
+   </property>
+  </action>
+  <action name="imageMorphologyAction">
+   <property name="text">
+    <string>图像形态学</string>
+   </property>
+  </action>
+  <action name="imageRestorationAction">
+   <property name="text">
+    <string>图像复原</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -86,6 +86,15 @@ MainWindow::MainWindow(QWidget *parent) :
                 imageMorphology->setAttribute(Qt::WA_DeleteOnClose);
                 imageMorphology->show();
             });
+
+    connect(ui->imageRestorationAction, &QAction::triggered,
+            [&]()
+            {
+                imageRestoration = new ImageRestoration(this);
+                imageRestoration->setWindowFlag(Qt::Window);
+                imageRestoration->setAttribute(Qt::WA_DeleteOnClose);
+                imageRestoration->show();
+            });
 }
 
 MainWindow::~MainWindow()
