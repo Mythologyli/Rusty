@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>二值化图像</string>
+   <string>图像复原</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>

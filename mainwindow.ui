@@ -80,11 +80,18 @@
     </property>
     <addaction name="imageRestorationAction"/>
    </widget>
+   <widget class="QMenu" name="hw6Menu">
+    <property name="title">
+     <string>作业六</string>
+    </property>
+    <addaction name="reconstructionAction"/>
+   </widget>
    <addaction name="hw1Menu"/>
    <addaction name="hw2Menu"/>
    <addaction name="hw3Menu"/>
    <addaction name="hw4Menu"/>
    <addaction name="hw5Menu"/>
+   <addaction name="hw6Menu"/>
    <addaction name="aboutMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -121,6 +128,11 @@
   <action name="imageRestorationAction">
    <property name="text">
     <string>图像复原</string>
+   </property>
+  </action>
+  <action name="reconstructionAction">
+   <property name="text">
+    <string>三维重建</string>
    </property>
   </action>
  </widget>

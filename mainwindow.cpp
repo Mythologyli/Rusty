@@ -95,6 +95,15 @@ MainWindow::MainWindow(QWidget *parent) :
                 imageRestoration->setAttribute(Qt::WA_DeleteOnClose);
                 imageRestoration->show();
             });
+
+    connect(ui->reconstructionAction, &QAction::triggered,
+            [&]()
+            {
+                reconstruction = new Reconstruction(this);
+                reconstruction->setWindowFlag(Qt::Window);
+                reconstruction->setAttribute(Qt::WA_DeleteOnClose);
+                reconstruction->show();
+            });
 }
 
 MainWindow::~MainWindow()

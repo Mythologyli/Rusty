@@ -10,6 +10,7 @@
 #include "imagesegmentation/imagesegmentation.h"
 #include "imagemorphology/imagemorphology.h"
 #include "imagerestoration/imagerestoration.h"
+#include "reconstruction/reconstruction.h"
 
 namespace Ui
 {
@@ -36,6 +37,7 @@ private:
     ImageSegmentation *imageSegmentation;
     ImageMorphology *imageMorphology;
     ImageRestoration *imageRestoration;
+    Reconstruction *reconstruction;
 };
 
 #endif // RUSTY_MAINWINDOW_H

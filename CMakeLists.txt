@@ -10,6 +10,7 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Concurrent
         Network
         Charts
         REQUIRED
@@ -28,6 +29,7 @@ add_executable(Rusty WIN32
         imagesegmentation/imagesegmentation.cpp
         imagemorphology/imagemorphology.cpp
         imagerestoration/imagerestoration.cpp
+        reconstruction/reconstruction.cpp
         resource.qrc
         )
 
@@ -35,6 +37,7 @@ target_link_libraries(Rusty
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Concurrent
         Qt::Network
         Qt::Charts
         )
